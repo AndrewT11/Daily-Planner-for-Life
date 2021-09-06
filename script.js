@@ -1,19 +1,23 @@
-Amount of hours in calender = 9
-use input for input then local storage?
------------------------------------------------------------------------
-var inputPlans = Input.value; somewhere
+// Amount of hours in calender = 9
+// use input for input then local storage?
+// -----------------------------------------------------------------------
+// var inputPlans = Input.value; somewhere
 
-var plans = localStorage.getItem("plans")
-var savedPlans = {
-    todo: inputPlans
-}
+// var plans = localStorage.getItem("plans")
+// var savedPlans = {
+//     todo: inputPlans
+// }
 
-plans = JSON.parse(plans);
-plans.push(inputPlans)
+// plans = JSON.parse(plans);
+// plans.push(inputPlans)
 
-var newPlans = JSON.stringify(plans)
- localStorage.setItem("plans". newPlans);
+// var newPlans = JSON.stringify(plans)
+//  localStorage.setItem("plans". newPlans);
 
+// trying to get timer to work. 
+// Format is just like notes. Checked script is linked. 
+var date = moment();
+$("#currentDay").text(date.format("MMM Do, YYYY"));
 
  
 // ## User Story
