@@ -9,9 +9,9 @@ var num = 9;
 var start = function () {
     for(var i= 0; i < num; i++) {
         $container.append.$divEl1;
-        $divEl1.addClass("col-1 hourBox hour");
+        $divEl1.addClass("col-2 hourBox hour");
         $container.append.$divEl2;
-        $divEl2.addClass("col-10 inputBox");
+        $divEl2.addClass("col-9 inputBox");
         $container.append.$divEl3;
         $divEl3.addClass("col-1 button");
     }
