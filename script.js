@@ -8,16 +8,22 @@ var num = 9;
 
 var start = function () {
     for(var i= 0; i < num; i++) {
-        $container.append.$divEl1;
+        $container.append($divEl1);
         $divEl1.addClass("col-2 hourBox hour");
-        $container.append.$divEl2;
+        $divEl1.css("border", "black");
+        $divEl1.text("a1")
+        $container.append($divEl2);
         $divEl2.addClass("col-9 inputBox");
-        $container.append.$divEl3;
+        $divEl2.css("border", "black");
+        $divEl2.text("a2")
+        $container.append($divEl3);
         $divEl3.addClass("col-1 button");
+        $divEl3.css("border", "black");
+        $divEl3.text("a3")
     }
 };
 
-start();
+start()
 
 
 // Amount of hours in calender = 9
@@ -36,8 +42,7 @@ start();
 // var newPlans = JSON.stringify(plans)
 //  localStorage.setItem("plans". newPlans);
 
-// trying to get timer to work. 
-// Format is just like notes. Checked script is linked. 
+//timer
 var date = moment();
 $("#currentDay").text(date.format("MMM Do, YYYY"));
 
