@@ -1,3 +1,25 @@
+//Playing around with appending
+
+var $container = $('.container');
+var $divEl1 = $('<div>');
+var $divEl2 = $('<div>');
+var $divEl3 = $('<div>');
+var num = 9;
+
+var start = function () {
+    for(var i= 0; i < num; i++) {
+        $container.append.$divEl1;
+        $divEl1.addClass("col-1 hourBox hour");
+        $container.append.$divEl2;
+        $divEl2.addClass("col-10 inputBox");
+        $container.append.$divEl3;
+        $divEl3.addClass("col-1 button");
+    }
+};
+
+start();
+
+
 // Amount of hours in calender = 9
 // use input for input then local storage?
 // -----------------------------------------------------------------------
@@ -18,6 +40,8 @@
 // Format is just like notes. Checked script is linked. 
 var date = moment();
 $("#currentDay").text(date.format("MMM Do, YYYY"));
+
+
 
  
 // ## User Story
