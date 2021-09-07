@@ -1,7 +1,7 @@
 
 //timer
 var date = moment();
-$("#currentDay").text(date.format("MMM Do, YYYY"));
+$("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
 
 
 
