@@ -9,7 +9,7 @@
 // var start = function () {
 //     for(var i= 0; i < num; i++) {
 //         $container.append($divEl1);
-//         $divEl1.addClass("col-2 hourBox hour");
+//         $divEl1.addClass("col-2 hour");
 //         $divEl1.css("border", "black");
 //         $divEl1.text("a1")
 //         $container.append($divEl2);
@@ -43,7 +43,7 @@
 //  localStorage.setItem("plans". newPlans);
 
 
-//javascript version of simple input for localStorage
+//javascript version of simple input for localStorage, convert to jquery
 
 // var storageInput = document.querySelector('storage');
 // var text = document.querySelector('.text');
@@ -64,3 +64,33 @@
 // }
 
 // button.addEventListener('click', saveToLocalStorage);
+
+//hardcoded html for scheduler. don't think this is the way to go.
+/*     <div id = "1" class="col-2 hourBox hour">a</div>
+        <textarea id = "1" class="">a</textarea>
+        <button id = "1" class="saveBtn">a</button>
+        <div id = "2" class="col-2 hourBox hour">b</div>
+        <textarea id = "2" class="">b</textarea>
+        <button id = "2" class="saveBtn">b</button>
+        <div id = "3" class="col-2 hourBox hour">c</div>
+        <textarea id = "3" class="">c</textarea>
+        <button id = "3" class="saveBtn">c</button>
+        <div id = "4" class="col-2 hourBox hour"></div>
+        <textarea id = "4" class=""></textarea>
+        <button id = "4" class="saveBtn"></button>
+        <div id = "5" class="col-2 hourBox hour"></div>
+        <textarea id = "5" class=""></textarea>
+        <button id = "5" class="saveBtn"></button>
+        <div id = "6" class="col-2 hourBox hour"></div>
+        <textarea id = "6" class=""></textarea>
+        <button id = "6" class="saveBtn"></button>
+        <div id = "7" class="col-2 hourBox hour"></div>
+        <textarea id = "7" class=""></textarea>
+        <button id = "7" class="saveBtn"></button>
+        <div id = "8" class="col-2 hourBox hour"></div>
+        <textarea id = "8" class=""></textarea>
+        <button id = "8" class="saveBtn"></button>
+        <div id = "9" class="col-2 hourBox hour"></div>
+        <textarea id = "9" class=""></textarea>
+        <button id = "9" class="saveBtn"></button> */
+

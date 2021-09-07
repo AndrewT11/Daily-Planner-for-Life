@@ -4,6 +4,7 @@ body {
   line-height: 1;
 }
 
+
 textarea {
   background: transparent;
   border: none;
@@ -70,11 +71,3 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.container {
-  display: flex;
-}
-
-.hour {
-  display: flex;
-  border: 1px solid red;
-}
