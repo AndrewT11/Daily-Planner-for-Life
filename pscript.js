@@ -41,3 +41,11 @@
 
 // var newPlans = JSON.stringify(plans)
 //  localStorage.setItem("plans". newPlans);
+
+
+//javascript version of simple input for localStorage
+//var savedEvent = function () {
+//     localtStorage.setItem('input', text.textContent);
+// }
+
+// GamepadButton.addEventListener('click', savedEvent);
