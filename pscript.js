@@ -44,8 +44,23 @@
 
 
 //javascript version of simple input for localStorage
-//var savedEvent = function () {
-//     localtStorage.setItem('input', text.textContent);
+
+// var storageInput = document.querySelector('storage');
+// var text = document.querySelector('.text');
+// var button = document.querySelector('button');
+// var storedInput = localStorage.getItem('textInput');
+
+// if(storageInput) {
+//     text.textContent = storedInput;
 // }
 
-// GamepadButton.addEventListener('click', savedEvent);
+// //this isn't needed. just for fun No text object
+// storageInput.addEvenetListener('input', function(letter){
+//     text.textContent = letter.target.value
+// })
+
+// var saveToLocalStorage = function () {
+//     localStorage.setItem('textInput', text.textContent);
+// }
+
+// button.addEventListener('click', saveToLocalStorage);
