@@ -17,10 +17,9 @@ var hours = [
 ]
 
 for(var i= 0; i < hours.length; i++) {
-    console.log(hours[i]);
     $(`<div class="col-2 time-block"></div>`).text(hours[i]).appendTo(".container");
-    $(`<textarea class="col-9 -input" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
-    $(`<button class="col-1 btn-success saveBtn" id="hour${i}"></button>`).text("save").appendTo(".container");
+    $(`<textarea class="col-9" id=""></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
+    $(`<button class="col-1 btn-success saveBtn" id=""></button>`).text("save").appendTo(".container");
 }
 
 
