@@ -4,6 +4,10 @@ var date = moment();
 $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
 
 
+//present time
+var now = parseInt(moment().format("HH"));
+console.log(now)
+
 var hours = [
     "9a",
     "10a",
@@ -19,20 +23,21 @@ var hours = [
 for(var i= 0; i < hours.length; i++) {
     $(`<div class="col-2 time-block"></div>`).text(hours[i]).appendTo(".container");
     $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
-    $(`<button class="col-1 btn-success saveBtn" id=""></button>`).text("save").appendTo(".container");
+    $(`<button class="col-1 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".container");
+
 }
 
 })
-var storageInput = document.querySelector('#input-${0}');
-var button = document.querySelector('saveBtn');
-var storedInput = localStorage.getItem('textInput');
+var storageInput = document.querySelector('#input-0');
+var button = document.querySelector('#saveBtn-0');
+var storedInput = localStorage.getItem('textInput-0');
 
-if(storageInput) {
+
     storageInput.textContent = storedInput;
-}
 
 var saveToLocalStorage = function () {
-    localStorage.setItem('textInput', storageInput.textContent);
+    localStorage.setItem('textInput-0', storageInput.textContent);
+    console.log("saved?")
 }
 
 button.addEventListener('click', saveToLocalStorage);
