@@ -1,67 +1,61 @@
 $(document).ready(function () {
-//timer
-var date = moment();
-$("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
+    //timer
+    var date = moment();
+    $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
 
 
-//present time
-var now = parseInt(moment().format("HH a"))-12;
-console.log(now)
+    //present time
+    var now = parseInt(moment().format("HH a"))-12;
+    console.log(now)
 
-var hours = [
-   { hour: "9a" }, 
-    {hour: "10a" },
-    {hour: "11a"},
-    { hour:"12p"},
-    { hour:"1p"},
-    { hour:"2p"},
-    { hour:"3p"},
-    { hour:"4p"},
-    { hour: "5p"}
-]
+    //hours on planner
+    var hours = [
+        { hour: "9a" }, 
+        { hour: "10a" },
+        { hour: "11a" },
+        { hour: "12p" },
+        { hour: "1p" },
+        { hour: "2p" },
+        { hour: "3p" },
+        { hour: "4p" },
+        { hour: "5p" }
+    ]
 
-$('<div class ="col-12 row"></div>').appendTo('.container')
+    //row that all elements will be appended to
+    $('<div class ="col-12 row"></div>').appendTo('.container')
 
-for(var i= 0; i < hours.length; i++) {
-    $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row");
-    $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
-    $(`<button class="col-2 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
+    //for loop to begin populating daily planner
+    for(var i= 0; i < hours.length; i++) {
+        $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row");
+        $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
+        $(`<button class="col-2 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
+        $('.time-block').css({"background": "lightgrey", "font-weight": "900"})
 
-    var storageInput = document.querySelector('#input-' + [i]);  //not working
-    var button = document.querySelector('#saveBtn-'+[i]); //working
-    var storedInput = localStorage.getItem('textInput-'+[i]); //half working
+    //local storage that is not working.
+        var storageInput = document.querySelector('#input-' + [i]);  //works
+        var button = document.querySelector('#saveBtn-' + [i]); //works
+        var storedInput = localStorage.getItem('textInput-' + [i]); //not sure if it works
+        
 
-    console.log("and here?")
-    storageInput.textContent = storedInput;
+        console.log("and here?")
+        storageInput.textContent = storedInput;
 
-var saveToLocalStorage = function () {
-    localStorage.setItem('textInput-' +[i], storageInput.textContent);
-    console.log("saved?")
-}
-button.addEventListener('click', saveToLocalStorage);
-
-}
-
-// var storageInput = document.querySelector('#input-' + [i]);
-// var button = document.querySelector('#saveBtn-'+[i]);
-// var storedInput = localStorage.getItem('textInput-'+[i]);
-
-    
-//     storageInput.textContent = storedInput;
-
-// var saveToLocalStorage = function () {
-//     localStorage.setItem('textInput-0', storageInput.textContent);
-//     console.log("saved?")
-// }
-
-// button.addEventListener('click', saveToLocalStorage);
-
-// userChoices.forEach(function (newItem) {
-//     var createLi = document.createElement("li");
-//     createLi.setAttribute("class", "choicesLi")
-//     createLi.textContent = newItem;
+        var saveToLocalStorage = function () {
+            localStorage.setItem('textInput-' +[i], storageInput.textContent);
+            console.log("saved?")
+        }
+        button.addEventListener('click', saveToLocalStorage);
+    }
+    // userChoices.forEach(function (newItem) {
+    //     var createLi = document.createElement("li");
+    //     createLi.setAttribute("class", "choicesLi")
+    //     createLi.textContent = newItem;
 })
 
+/////////////////////////////////////////////////////////////////////////
+//Left to do:
+// - local storage
+// - color change past, present, future
 
 //////////////////////////////////////////////////////////////////////////
 
