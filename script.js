@@ -24,8 +24,8 @@ $('<div class ="col-12 row"></div>').appendTo('.container')
 
 for(var i= 0; i < hours.length; i++) {
     $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row");
-    $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
-    $(`<button class="col-1 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
+    $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
+    $(`<button class="col-2 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
 
     var storageInput = document.querySelector('#input-' + [i]);  //not working
     var button = document.querySelector('#saveBtn-'+[i]); //working
