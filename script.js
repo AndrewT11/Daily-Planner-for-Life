@@ -5,35 +5,37 @@ $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
 
 
 //present time
-var now = parseInt(moment().format("HH"));
+var now = parseInt(moment().format("HH a"))-12;
 console.log(now)
 
 var hours = [
-    "9a",
-    "10a",
-    "11a",
-    "12p",
-    "1p",
-    "2p",
-    "3p",
-    "4p",
-    "5p"
+   { hour: "9a" }, 
+    {hour: "10a" },
+    {hour: "11a"},
+    { hour:"12p"},
+    { hour:"1p"},
+    { hour:"2p"},
+    { hour:"3p"},
+    { hour:"4p"},
+    { hour: "5p"}
 ]
 
+$('<div class ="col-12 row"></div>').appendTo('.container')
+
 for(var i= 0; i < hours.length; i++) {
-    $(`<div class="col-2 time-block"></div>`).text(hours[i]).appendTo(".container");
-    $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
-    $(`<button class="col-1 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".container");
+    $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row");
+    $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
+    $(`<button class="col-1 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
 
-    var storageInput = document.querySelector('#input-' + [i]);
-    var button = document.querySelector('#saveBtn-'+[i]);
-    var storedInput = localStorage.getItem('textInput-'+[i]);
+    var storageInput = document.querySelector('#input-' + [i]);  //not working
+    var button = document.querySelector('#saveBtn-'+[i]); //working
+    var storedInput = localStorage.getItem('textInput-'+[i]); //half working
 
-    
+    console.log("and here?")
     storageInput.textContent = storedInput;
 
 var saveToLocalStorage = function () {
-    localStorage.setItem('textInput-0', storageInput.textContent);
+    localStorage.setItem('textInput-' +[i], storageInput.textContent);
     console.log("saved?")
 }
 button.addEventListener('click', saveToLocalStorage);
