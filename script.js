@@ -25,53 +25,44 @@ for(var i= 0; i < hours.length; i++) {
     $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
     $(`<button class="col-1 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".container");
 
-}
+    var storageInput = document.querySelector('#input-' + [i]);
+    var button = document.querySelector('#saveBtn-'+[i]);
+    var storedInput = localStorage.getItem('textInput-'+[i]);
 
-})
-var storageInput = document.querySelector('#input-0');
-var button = document.querySelector('#saveBtn-0');
-var storedInput = localStorage.getItem('textInput-0');
-
-
+    
     storageInput.textContent = storedInput;
 
 var saveToLocalStorage = function () {
     localStorage.setItem('textInput-0', storageInput.textContent);
     console.log("saved?")
 }
-
 button.addEventListener('click', saveToLocalStorage);
+
+}
+
+// var storageInput = document.querySelector('#input-' + [i]);
+// var button = document.querySelector('#saveBtn-'+[i]);
+// var storedInput = localStorage.getItem('textInput-'+[i]);
+
+    
+//     storageInput.textContent = storedInput;
+
+// var saveToLocalStorage = function () {
+//     localStorage.setItem('textInput-0', storageInput.textContent);
+//     console.log("saved?")
+// }
+
+// button.addEventListener('click', saveToLocalStorage);
+
+// userChoices.forEach(function (newItem) {
+//     var createLi = document.createElement("li");
+//     createLi.setAttribute("class", "choicesLi")
+//     createLi.textContent = newItem;
+})
+
 
 //////////////////////////////////////////////////////////////////////////
 
-
-
-// var $container = $('.container');
-// var $divEl1 = $('<div>');
-// var $textareaEl = $('<textarea>');
-// var $saveButtonEl = $('<button>');
-// var num = 9;
-
-// var start = function () {
-//     for(var i= 0; i < num; i++) {
-//         $container.append($divEl1);
-//         $divEl1.addClass("col-2 hour");
-//         $divEl1.css("border", "black");
-//         $divEl1.text("a1")
-//         $container.append($textareaEl);
-//         $textareaEl.addClass("col-9 inputBox");
-//         $textareaEl.css("border", "black");
-//         $textareaEl.text("a2")
-//         $container.append($saveButtonEl);
-//         $saveButtonEl.addClass("col-1 button");
-//         $saveButtonEl.css("border", "black");
-//         $saveButtonEl.text("a3")
-//     }
-//     console.log("hi");
-// };
-
-// start()
- 
 // ## User Story
 
 // ```md
