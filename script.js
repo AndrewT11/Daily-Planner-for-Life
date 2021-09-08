@@ -18,13 +18,29 @@ var hours = [
 
 for(var i= 0; i < hours.length; i++) {
     $(`<div class="col-2 time-block"></div>`).text(hours[i]).appendTo(".container");
-    $(`<textarea class="col-9" id=""></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
+    $(`<textarea class="col-9" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".container");
     $(`<button class="col-1 btn-success saveBtn" id=""></button>`).text("save").appendTo(".container");
 }
 
-
-
 })
+var storageInput = document.querySelector('#input-${0}');
+var button = document.querySelector('saveBtn');
+var storedInput = localStorage.getItem('textInput');
+
+if(storageInput) {
+    storageInput.textContent = storedInput;
+}
+
+var saveToLocalStorage = function () {
+    localStorage.setItem('textInput', storageInput.textContent);
+}
+
+button.addEventListener('click', saveToLocalStorage);
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
 // var $container = $('.container');
 // var $divEl1 = $('<div>');
 // var $textareaEl = $('<textarea>');
