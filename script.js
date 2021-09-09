@@ -26,26 +26,28 @@ $(document).ready(function () {
 
     //for loop to begin populating daily planner
     for(var i= 0; i < hours.length; i++) {
-        $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row");
-        $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row");
-        $(`<button class="col-2 btn-success saveBtn-${i}" id="saveBtn-${i}"></button>`).text("save").appendTo(".row");
-        $('.time-block').css({"background": "lightgrey", "font-weight": "900"})
-
-    //local storage that is not working.
-        var storageInput = document.querySelector('#input-' + [i]);  //works
-        var button = document.querySelector('#saveBtn-' + [i]); //works
-        var storedInput = localStorage.getItem('textInput-' + [i]); //not sure if it works
-        
-
-        console.log("and here?")
-        storageInput.textContent = storedInput;
-
-        var saveToLocalStorage = function () {
-            localStorage.setItem('textInput-' +[i], storageInput.textContent);
-            console.log("saved?")
-        }
-        button.addEventListener('click', saveToLocalStorage);
+        $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row"); //row to append all time-blocks
+        $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row"); //input-0, input-1, input-2
+        $(`<button class="col-2 saveBtn" id="saveBtn-${i}"></button>`).text("save").appendTo(".row"); //saveBtn-0, saveBtn-1, saveBtn-2
+        $('.time-block').css({"background": "lightgrey", "font-weight": "900"}) //styling for first div hour
     }
+
+     //local storage that is not working. Will have to write out manually for each. Cannot figure out how to for loop with input index.
+     var storageInput0 = document.querySelector('#input-0');  //works
+     var button0 = document.querySelector('#saveBtn-0'); //works
+     var storedInput0 = localStorage.getItem('textInput-0'); //not sure if it works
+     
+
+     console.log("and here?")
+     storageInput0.textContent = storedInput0;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-0', storageInput0.textContent);
+         console.log("saved?")
+     }
+     button0.addEventListener('click', saveToLocalStorage);
+
+
     // userChoices.forEach(function (newItem) {
     //     var createLi = document.createElement("li");
     //     createLi.setAttribute("class", "choicesLi")
