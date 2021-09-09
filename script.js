@@ -4,10 +4,6 @@ $(document).ready(function () {
     $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
 
 
-    //present time
-    var currentTime = parseInt(moment().format("HH a"))-12;
-    console.log(currentTime)
-
     //hours on planner
     var hours = [
         { hour: "9:00 am" }, 
@@ -135,6 +131,15 @@ $(document).ready(function () {
 
 
      //Time comparisons for color change past, present, future
+  //present time
+  var currentTime = parseInt(moment().format("HH a"))-12;
+  console.log(currentTime) 
+
+  //if (currentTime > schedule time), class = past
+  
+  //if (currentTime == schedule time), class = present
+  
+  //if (currentTime < schedule time), class = future
 
 
 
