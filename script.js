@@ -10,15 +10,15 @@ $(document).ready(function () {
 
     //hours on planner
     var hours = [
-        { hour: "9a" }, 
-        { hour: "10a" },
-        { hour: "11a" },
-        { hour: "12p" },
-        { hour: "1p" },
-        { hour: "2p" },
-        { hour: "3p" },
-        { hour: "4p" },
-        { hour: "5p" }
+        { hour: "9:00 am" }, 
+        { hour: "10:00 am" },
+        { hour: "11:00 am" },
+        { hour: "12:00 pm" },
+        { hour: "1:00 pm" },
+        { hour: "2:00 pm" },
+        { hour: "3:00 pm" },
+        { hour: "4:00 pm" },
+        { hour: "5:00 pm" }
     ]
 
     //row that all elements will be appended to
@@ -26,7 +26,8 @@ $(document).ready(function () {
 
     //for loop to begin populating daily planner
     for(var i= 0; i < hours.length; i++) {
-        $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row"); //row to append all time-blocks
+        $(`<div class="col-2 time-block"></div>`).text(hours[i].hour).appendTo(".row"); //row to append all time-blocks. 
+        // Why can I not use $('.row').append('<div>)
         $(`<textarea class="col-8" id="input-${i}"></textarea>`).attr("placeholder", "Any Plans?").appendTo(".row"); //input-0, input-1, input-2
         $(`<button class="col-2 saveBtn" id="saveBtn-${i}"></button>`).text("save").appendTo(".row"); //saveBtn-0, saveBtn-1, saveBtn-2
         $('.time-block').css({"background": "lightgrey", "font-weight": "900"}) //styling for first div hour
@@ -49,8 +50,6 @@ $(document).ready(function () {
      var button1 = document.getElementById('saveBtn-1'); 
      storageInput1.value = localStorage.getItem('textInput-1'); 
      
-     
-
      var saveToLocalStorage1 = function () {
          localStorage.setItem('textInput-1', storageInput1.value);
          console.log("saved?")
@@ -62,8 +61,6 @@ $(document).ready(function () {
      var button2 = document.getElementById('saveBtn-2'); 
      storageInput2.value = localStorage.getItem('textInput-2'); 
      
-     
-
      var saveToLocalStorage2 = function () {
          localStorage.setItem('textInput-2', storageInput2.value);
          console.log("saved?")
@@ -75,8 +72,6 @@ $(document).ready(function () {
      var button3 = document.getElementById('saveBtn-3'); 
      storageInput3.value= localStorage.getItem('textInput-3'); 
      
-     
-
      var saveToLocalStorage3 = function () {
          localStorage.setItem('textInput-3', storageInput3.value);
          console.log("saved?")
@@ -88,8 +83,6 @@ $(document).ready(function () {
      var button4 = document.getElementById('saveBtn-4'); 
      storageInput4.value = localStorage.getItem('textInput-4'); 
      
-     
-
      var saveToLocalStorage4 = function () {
          localStorage.setItem('textInput-4', storageInput4.value);
          console.log("saved?")
@@ -101,8 +94,6 @@ $(document).ready(function () {
      var button5 = document.getElementById('saveBtn-5'); 
      storageInput5.value = localStorage.getItem('textInput-5'); 
      
-    
-
      var saveToLocalStorage5 = function () {
          localStorage.setItem('textInput-5', storageInput5.value);
          console.log("saved?")
@@ -114,8 +105,6 @@ $(document).ready(function () {
      var button6 = document.getElementById('saveBtn-6'); 
      storageInput6.value = localStorage.getItem('textInput-6'); 
      
-     
-
      var saveToLocalStorage6 = function () {
          localStorage.setItem('textInput-6', storageInput6.value);
          console.log("saved?")
@@ -126,9 +115,7 @@ $(document).ready(function () {
      var storageInput7 = document.getElementById('input-7');  
      var button7 = document.getElementById('saveBtn-7'); 
      storageInput7.value = localStorage.getItem('textInput-7'); 
-     
     
-
      var saveToLocalStorage7 = function () {
          localStorage.setItem('textInput-7', storageInput7.value);
          console.log("saved?")
@@ -140,8 +127,6 @@ $(document).ready(function () {
      var button8 = document.getElementById('saveBtn-8'); 
      storageInput8.value = localStorage.getItem('textInput-8'); 
      
-     
-
      var saveToLocalStorage8 = function () {
          localStorage.setItem('textInput-8', storageInput8.value);
          console.log("saved?")
