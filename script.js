@@ -33,12 +33,11 @@ $(document).ready(function () {
     }
 
      //local storage that is not working. Will have to write out manually for each. Cannot figure out how to for loop with input index.
-     var storageInput0 = document.querySelector('#input-0');  
-     var button0 = document.querySelector('#saveBtn-0'); 
-     var storedInput0 = localStorage.getItem('textInput-0'); 
+     //9 am
+     var storageInput0 = document.querySelector('#input-0');  //select text area id
+     var button0 = document.querySelector('#saveBtn-0');  //select button id
+     var storedInput0 = localStorage.getItem('textInput-0'); //select key value to get from localStorage
      
-
-     console.log("and here?")
      storageInput0.textContent = storedInput0;
 
      var saveToLocalStorage = function () {
@@ -46,6 +45,110 @@ $(document).ready(function () {
          console.log("saved?")
      }
      button0.addEventListener('click', saveToLocalStorage);
+
+     //10am
+     var storageInput1 = document.querySelector('#input-1');  
+     var button1 = document.querySelector('#saveBtn-1'); 
+     var storedInput1 = localStorage.getItem('textInput-1'); 
+     
+     storageInput1.textContent = storedInput1;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-1', storedInput1);
+         console.log("saved?")
+     }
+     button1.addEventListener('click', saveToLocalStorage);
+
+    //11am
+     var storageInput2 = document.querySelector('#input-2');  
+     var button2 = document.querySelector('#saveBtn-2'); 
+     var storedInput2 = localStorage.getItem('textInput-2'); 
+     
+     storageInput2.textContent = storedInput2;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-2', storedInput2);
+         console.log("saved?")
+     }
+     button2.addEventListener('click', saveToLocalStorage);
+
+    // 12p
+     var storageInput3 = document.querySelector('#input-3');  
+     var button3 = document.querySelector('#saveBtn-3'); 
+     var storedInput3 = localStorage.getItem('textInput-3'); 
+     
+     storageInput3.textContent = storedInput0;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-3', storedInput3);
+         console.log("saved?")
+     }
+     button3.addEventListener('click', saveToLocalStorage);
+
+     //1pm
+     var storageInput4 = document.querySelector('#input-4');  
+     var button4 = document.querySelector('#saveBtn-4'); 
+     var storedInput4 = localStorage.getItem('textInput-4'); 
+     
+     storageInput4.textContent = storedInput4;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-4', storedInput4);
+         console.log("saved?")
+     }
+     button4.addEventListener('click', saveToLocalStorage);
+
+     //2pm
+     var storageInput5 = document.querySelector('#input-5');  
+     var button5 = document.querySelector('#saveBtn-5'); 
+     var storedInput5 = localStorage.getItem('textInput-5'); 
+     
+     storageInput5.textContent = storedInput5;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-5', storedInput5);
+         console.log("saved?")
+     }
+     button5.addEventListener('click', saveToLocalStorage);
+
+     //3pm
+     var storageInput6 = document.querySelector('#input-6');  
+     var button6 = document.querySelector('#saveBtn-6'); 
+     var storedInput6 = localStorage.getItem('textInput-6'); 
+     
+     storageInput6.textContent = storedInput6;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-6', storedInput6);
+         console.log("saved?")
+     }
+     button6.addEventListener('click', saveToLocalStorage);
+
+     //4pm
+     var storageInput7 = document.querySelector('#input-7');  
+     var button7 = document.querySelector('#saveBtn-7'); 
+     var storedInput7 = localStorage.getItem('textInput-7'); 
+     
+     storageInput7.textContent = storedInput7;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-7', storedInput7);
+         console.log("saved?")
+     }
+     button7.addEventListener('click', saveToLocalStorage);
+
+     //5pm
+     var storageInput8 = document.querySelector('#input-8');  
+     var button8 = document.querySelector('#saveBtn-8'); 
+     var storedInput8 = localStorage.getItem('textInput-8'); 
+     
+     storageInput8.textContent = storedInput8;
+
+     var saveToLocalStorage = function () {
+         localStorage.setItem('textInput-8', storedInput8);
+         console.log("saved?")
+     }
+     button8.addEventListener('click', saveToLocalStorage);
 
 
 })
