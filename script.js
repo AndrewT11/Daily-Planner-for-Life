@@ -33,25 +33,21 @@ $(document).ready(function () {
     }
 
      //local storage that is not working. Will have to write out manually for each. Cannot figure out how to for loop with input index.
-     var storageInput0 = document.querySelector('#input-0');  //works
-     var button0 = document.querySelector('#saveBtn-0'); //works
-     var storedInput0 = localStorage.getItem('textInput-0'); //not sure if it works
+     var storageInput0 = document.querySelector('#input-0');  
+     var button0 = document.querySelector('#saveBtn-0'); 
+     var storedInput0 = localStorage.getItem('textInput-0'); 
      
 
      console.log("and here?")
      storageInput0.textContent = storedInput0;
 
      var saveToLocalStorage = function () {
-         localStorage.setItem('textInput-0', storageInput0.textContent);
+         localStorage.setItem('textInput-0', storedInput0);
          console.log("saved?")
      }
      button0.addEventListener('click', saveToLocalStorage);
 
 
-    // userChoices.forEach(function (newItem) {
-    //     var createLi = document.createElement("li");
-    //     createLi.setAttribute("class", "choicesLi")
-    //     createLi.textContent = newItem;
 })
 
 /////////////////////////////////////////////////////////////////////////
