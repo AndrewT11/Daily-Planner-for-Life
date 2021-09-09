@@ -5,8 +5,8 @@ $(document).ready(function () {
 
 
     //present time
-    var now = parseInt(moment().format("HH a"))-12;
-    console.log(now)
+    var currentTime = parseInt(moment().format("HH a"))-12;
+    console.log(currentTime)
 
     //hours on planner
     var hours = [
@@ -38,8 +38,6 @@ $(document).ready(function () {
      var button0 = document.getElementById('saveBtn-0');  //select button id
      storageInput0.value = localStorage.getItem('textInput-0'); //select key value to get from localStorage
     
-    
-
      var saveToLocalStorage0 = function () {
          localStorage.setItem('textInput-0', storageInput0.value);
          console.log("saved?")
@@ -49,12 +47,12 @@ $(document).ready(function () {
      //10am
      var storageInput1 = document.getElementById('input-1');  
      var button1 = document.getElementById('saveBtn-1'); 
-     var storedInput1 = localStorage.getItem('textInput-1'); 
+     storageInput1.value = localStorage.getItem('textInput-1'); 
      
-     storageInput1.textContent = storedInput1;
+     
 
      var saveToLocalStorage1 = function () {
-         localStorage.setItem('textInput-1', storedInput1);
+         localStorage.setItem('textInput-1', storageInput1.value);
          console.log("saved?")
      }
      button1.addEventListener('click', saveToLocalStorage1);
@@ -62,12 +60,12 @@ $(document).ready(function () {
     //11am
      var storageInput2 = document.getElementById('input-2');  
      var button2 = document.getElementById('saveBtn-2'); 
-     var storedInput2 = localStorage.getItem('textInput-2'); 
+     storageInput2.value = localStorage.getItem('textInput-2'); 
      
-     storageInput2.textContent = storedInput2;
+     
 
      var saveToLocalStorage2 = function () {
-         localStorage.setItem('textInput-2', storedInput2);
+         localStorage.setItem('textInput-2', storageInput2.value);
          console.log("saved?")
      }
      button2.addEventListener('click', saveToLocalStorage2);
@@ -75,12 +73,12 @@ $(document).ready(function () {
     // 12p
      var storageInput3 = document.getElementById('input-3');  
      var button3 = document.getElementById('saveBtn-3'); 
-     var storedInput3 = localStorage.getItem('textInput-3'); 
+     storageInput3.value= localStorage.getItem('textInput-3'); 
      
-     storageInput3.textContent = storedInput3;
+     
 
      var saveToLocalStorage3 = function () {
-         localStorage.setItem('textInput-3', storedInput3);
+         localStorage.setItem('textInput-3', storageInput3.value);
          console.log("saved?")
      }
      button3.addEventListener('click', saveToLocalStorage3);
@@ -88,12 +86,12 @@ $(document).ready(function () {
      //1pm
      var storageInput4 = document.getElementById('input-4');  
      var button4 = document.getElementById('saveBtn-4'); 
-     var storedInput4 = localStorage.getItem('textInput-4'); 
+     storageInput4.value = localStorage.getItem('textInput-4'); 
      
-     storageInput4.textContent = storedInput4;
+     
 
      var saveToLocalStorage4 = function () {
-         localStorage.setItem('textInput-4', storedInput4);
+         localStorage.setItem('textInput-4', storageInput4.value);
          console.log("saved?")
      }
      button4.addEventListener('click', saveToLocalStorage4);
@@ -101,12 +99,12 @@ $(document).ready(function () {
      //2pm
      var storageInput5 = document.getElementById('input-5');  
      var button5 = document.getElementById('saveBtn-5'); 
-     var storedInput5 = localStorage.getItem('textInput-5'); 
+     storageInput5.value = localStorage.getItem('textInput-5'); 
      
-     storageInput5.textContent = storedInput5;
+    
 
      var saveToLocalStorage5 = function () {
-         localStorage.setItem('textInput-5', storedInput5);
+         localStorage.setItem('textInput-5', storageInput5.value);
          console.log("saved?")
      }
      button5.addEventListener('click', saveToLocalStorage5);
@@ -114,12 +112,12 @@ $(document).ready(function () {
      //3pm
      var storageInput6 = document.getElementById('input-6');  
      var button6 = document.getElementById('saveBtn-6'); 
-     var storedInput6 = localStorage.getItem('textInput-6'); 
+     storageInput6.value = localStorage.getItem('textInput-6'); 
      
-     storageInput6.textContent = storedInput6;
+     
 
      var saveToLocalStorage6 = function () {
-         localStorage.setItem('textInput-6', storedInput6);
+         localStorage.setItem('textInput-6', storageInput6.value);
          console.log("saved?")
      }
      button6.addEventListener('click', saveToLocalStorage6);
@@ -127,12 +125,12 @@ $(document).ready(function () {
      //4pm
      var storageInput7 = document.getElementById('input-7');  
      var button7 = document.getElementById('saveBtn-7'); 
-     var storedInput7 = localStorage.getItem('textInput-7'); 
+     storageInput7.value = localStorage.getItem('textInput-7'); 
      
-     storageInput7.textContent = storedInput7;
+    
 
      var saveToLocalStorage7 = function () {
-         localStorage.setItem('textInput-7', storedInput7);
+         localStorage.setItem('textInput-7', storageInput7.value);
          console.log("saved?")
      }
      button7.addEventListener('click', saveToLocalStorage7);
@@ -140,12 +138,12 @@ $(document).ready(function () {
      //5pm
      var storageInput8 = document.getElementById('input-8');  
      var button8 = document.getElementById('saveBtn-8'); 
-     var storedInput8 = localStorage.getItem('textInput-8'); 
+     storageInput8.value = localStorage.getItem('textInput-8'); 
      
-     storageInput8.textContent = storedInput8;
+     
 
      var saveToLocalStorage8 = function () {
-         localStorage.setItem('textInput-8', storedInput8);
+         localStorage.setItem('textInput-8', storageInput8.value);
          console.log("saved?")
      }
      button8.addEventListener('click', saveToLocalStorage8);
