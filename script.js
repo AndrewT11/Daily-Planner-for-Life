@@ -29,8 +29,9 @@ $(document).ready(function () {
         $(`<button class="col-2 saveBtn" id="saveBtn-${i}"></button>`).text("save").appendTo(".row"); //saveBtn-0, saveBtn-1, saveBtn-2
         $('.time-block').css({"background": "lightgrey", "font-weight": "900"}) //styling for first div hour
     }
-//////////////////////////////////////
-     //local storage that is not working. Will have to write out manually for each. Cannot figure out how to for loop with input index.
+
+     //localStorage for input. Figure out problem with JQuery DOM element selection
+
      //9 am
      var storageInput0 = document.getElementById('input-0');  //select text area id
      var button0 = document.getElementById('saveBtn-0');  //select button id
@@ -131,75 +132,76 @@ $(document).ready(function () {
      button8.addEventListener('click', saveToLocalStorage8);
 
 
-     //Time comparisons for color change past, present, future
+     
   //present time
   var currentTime = parseInt(moment().format("HH a"));
   console.log(currentTime) 
 
-  if (currentTime > 9) {
-    $('#input-0').addClass("past")
-} else if (currentTime === 9) {
-    $('#input-0').addClass("present")
-}  else {
-    $('#input-0').addClass("future")
-}
+  //Time comparisons for color change past, present, future
+    if (currentTime > 9) {
+        $('#input-0').prop('class', "col-8 past")
+    } else if (currentTime === 9) {
+        $('#input-0').prop('class', 'col-8 present')
+    }  else {
+        $('#input-0').prop('class', 'col-8 future')
+    }
 
-if (currentTime > 10) {
-    $('#input-1').addClass("past")
-} else if (currentTime === 10) {
-    $('#input-1').addClass("present")
-}  else {
-    $('#input-1').addClass("future")
-}
-if (currentTime > 11) {
-    $('#input-2').addClass("past")
-} else if (currentTime === 11) {
-    $('#input-2').addClass("present")
-}  else {
-    $('#input-2').addClass("future")
-}
-if (currentTime > 12) {
-    $('#input-3').addClass("past")
-} else if (currentTime === 12) {
-    $('#input-3').addClass("present")
-}  else {
-    $('#input-3').addClass("future")
-}
-if (currentTime > 13) {
-    $('#input-4').addClass("past")
-} else if (currentTime === 13) {
-    $('#input-4').addClass("present")
-}  else {
-    $('#input-4').addClass("future")
-}
-if (currentTime > 14) {
-    $('#input-5').addClass("past")
-} else if (currentTime === 14) {
-    $('#input-5').addClass("present")
-}  else {
-    $('#input-5').addClass("future")
-}
-if (currentTime > 15) {
-    $('#input-6').addClass("past")
-} else if (currentTime === 15) {
-    $('#input-6').addClass("present")
-}  else {
-    $('#input-6').addClass("future")
-}
-if (currentTime > 16) {
-    $('#input-7').addClass("past")
-} else if (currentTime === 16) {
-    $('#input-7').addClass("present")
-}  else {
-    $('#input-7').addClass("future")
-}
-if (currentTime > 17) {
-    $('#input-8').addClass("past")
-} else if (currentTime === 17) {
-    $('#input-8').addClass("present")
-}  else {
-    $('#input-8').addClass("future")
-}
+    if (currentTime > 10) {
+        $('#input-1').prop('class', "col-8 past")
+    } else if (currentTime === 10) {
+        $('#input-1').prop('class', 'col-8 present')
+    }  else {
+        $('#input-1').prop('class', 'col-8 future')
+    }
+    if (currentTime > 11) {
+        $('#input-2').prop('class', "col-8 past")
+    } else if (currentTime === 11) {
+        $('#input-2').prop('class', 'col-8 present')
+    }  else {
+        $('#input-2').prop('class', 'col-8 future')
+    }
+    if (currentTime > 12) {
+        $('#input-3').prop('class', "col-8 past")
+    } else if (currentTime === 12) {
+        $('#input-3').prop('class', 'col-8 present')
+    }  else {
+        $('#input-3').prop('class', 'col-8 future')
+    }
+    if (currentTime > 13) {
+        $('#input-4').prop('class', "col-8 past")
+    } else if (currentTime === 13) {
+        $('#input-4').prop('class', 'col-8 present')
+    }  else {
+        $('#input-4').prop('class', 'col-8 future')
+    }
+    if (currentTime > 14) {
+        $('#input-5').prop('class', "col-8 past")
+    } else if (currentTime === 14) {
+        $('#input-5').prop('class', 'col-8 present')
+    }  else {
+        $('#input-5').prop('class', 'col-8 future')
+    }
+    if (currentTime > 15) {
+        $('#input-6').prop('class', "col-8 past")
+    } else if (currentTime === 15) {
+        $('#input-6').prop('class', 'col-8 present')
+    }  else {
+        $('#input-6').prop('class', 'col-8 future')
+    }
+    if (currentTime > 16) {
+        $('#input-7').prop('class', "col-8 past")
+    } else if (currentTime === 16) {
+        $('#input-7').prop('class', 'col-8 present')
+    }  else {
+        $('#input-7').prop('class', 'col-8 future')
+    }
+    if (currentTime > 17) {
+        $('#input-8').prop('class', "col-8 past")
+    } else if (currentTime === 17) {
+        $('#input-8').prop('class', 'col-8 present')
+    }  else {
+        $('#input-8').prop('class', 'col-8 future')
+    }
 
 })
 
