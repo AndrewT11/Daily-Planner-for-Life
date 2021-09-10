@@ -48,10 +48,12 @@ THEN the saved events persist
 * [Code Repository Link](https://github.com/AndrewT11/Daily-Planner-for-Life)
 
 ## Credits
-Andrew Tran
-Levi Halvorson
-Matthew Daniels
-Mengmei Tu
+*Andrew Tran
+*Jeremy AskBCS Learning Assistant
+*Levi Halvorson
+*Matthew Daniels
+*Mengmei Tu
+
 
 
 ### Resources
