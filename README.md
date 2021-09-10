@@ -11,10 +11,10 @@ You are important.
 ## Installation Instructions
 No installation necessary. 
 1) Click on live page.
-2) Push "Begin Quiz"
-3) Answer the multiple choice question.
-4) Pray your answer is right.
-4) After finishing all questions, see if you got the high score!
+2) Select time you have plans.
+3) Insert Plans.
+4) Save plans.
+4) Success!
 
 
 
@@ -39,7 +39,7 @@ THEN the saved events persist
 
 
 ## Screenshot
-![Quiz Demo](Assets/quizgamedemo.gif)
+![Planner Demo](Assets/plannerdemo.gif)
 
 
 ## Links

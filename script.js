@@ -1,9 +1,15 @@
 $(document).ready(function () {
-    //timer
-    var date = moment();
-    $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
+    
+    //timer. Clock will update every second.
+    setInterval(function(){
+        Event.preventDefault()
+        var date = moment().format("MMM Do YYYY, h:mm:ss a");
+
+    $("#currentDay").text(date);
+    }, 1000)
+     
+    //variable to compare time to scheduler
     var currentTime = parseInt(moment().format("HH a"));
-    console.log(currentTime) 
 
     //hours on planner
     var hours = [
