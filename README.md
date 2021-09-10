@@ -22,17 +22,17 @@ No installation necessary.
 Students have completed this project when:
 
 GIVEN I am using a daily planner to create a schedule
-**WHEN I open the planner<br />
+*WHEN I open the planner<br />
 THEN the current day is displayed at the top of the calendar <br /><br />
-**WHEN I scroll down<br />
+*WHEN I scroll down<br />
 THEN I am presented with timeblocks for standard business hours<br /><br />
-**WHEN I view the timeblocks for that day<br />
+*WHEN I view the timeblocks for that day<br />
 THEN each timeblock is color coded to indicate whether it is in the past, present, or future<br /><br />
-**WHEN I click into a timeblock<br />
+*WHEN I click into a timeblock<br />
 THEN I can enter an event<br /><br />
-**WHEN I click the save button for that timeblock<br />
+*WHEN I click the save button for that timeblock<br />
 THEN the text for that event is saved in local storage<br /><br />
-**WHEN I refresh the page<br />
+*WHEN I refresh the page<br />
 THEN the saved events persist<br /><br />
 
 
@@ -47,11 +47,11 @@ THEN the saved events persist<br /><br />
 * [Code Repository Link](https://github.com/AndrewT11/Daily-Planner-for-Life)
 
 ## Credits
-*Andrew Tran
-*Jeremy AskBCS Learning Assistant
-*Levi Halvorson
-*Matthew Daniels
-*Mengmei Tu
+Andrew Tran<br />
+Jeremy AskBCS Learning Assistant<br />
+Levi Halvorson<br />
+Matthew Daniels<br />
+Mengmei Tu
 
 
 
