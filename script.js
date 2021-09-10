@@ -2,10 +2,10 @@ $(document).ready(function () {
     
     //timer. Clock will update every second.
     setInterval(function(){
-        Event.preventDefault()
+        
         var date = moment().format("MMM Do YYYY, h:mm:ss a");
-
-    $("#currentDay").text(date);
+        $("#currentDay").text(date);
+        
     }, 1000)
      
     //variable to compare time to scheduler
@@ -44,7 +44,7 @@ $(document).ready(function () {
      //select button id
      var button0 = $('#saveBtn-0');  
      //set value in input box
-     storageInput0.value = localStorage.getItem('textInput-0'); 
+     storageInput0.text(localStorage.getItem('textInput-0')); 
     
      var saveToLocalStorage0 = function () {
          localStorage.setItem('textInput-0', storageInput0.val());
@@ -56,7 +56,7 @@ $(document).ready(function () {
      //10am
      var storageInput1 = $('#input-1');  
      var button1 = $('#saveBtn-1'); 
-     storageInput1.value = localStorage.getItem('textInput-1'); 
+     storageInput1.text(localStorage.getItem('textInput-1')); 
      
      var saveToLocalStorage1 = function () {
          localStorage.setItem('textInput-1', storageInput1.val());
@@ -67,7 +67,7 @@ $(document).ready(function () {
     //11am
      var storageInput2 = $('#input-2');  
      var button2 = $('#saveBtn-2'); 
-     storageInput2.value = localStorage.getItem('textInput-2'); 
+     storageInput2.text(localStorage.getItem('textInput-2'));
      
      var saveToLocalStorage2 = function () {
          localStorage.setItem('textInput-2', storageInput2.val());
@@ -78,7 +78,7 @@ $(document).ready(function () {
     // 12p
      var storageInput3 = $('#input-3');  
      var button3 = $('#saveBtn-3'); 
-     storageInput3.value= localStorage.getItem('textInput-3'); 
+     storageInput3.text(localStorage.getItem('textInput-3')); 
      
      var saveToLocalStorage3 = function () {
          localStorage.setItem('textInput-3', storageInput3.val());
@@ -89,7 +89,7 @@ $(document).ready(function () {
      //1pm
      var storageInput4 = $('#input-4');  
      var button4 = $('#saveBtn-4'); 
-     storageInput4.value = localStorage.getItem('textInput-4'); 
+     storageInput4.text(localStorage.getItem('textInput-4'));
      
      var saveToLocalStorage4 = function () {
          localStorage.setItem('textInput-4', storageInput4.val());
@@ -100,7 +100,7 @@ $(document).ready(function () {
      //2pm
      var storageInput5 = $('#input-5');  
      var button5 = $('#saveBtn-5'); 
-     storageInput5.value = localStorage.getItem('textInput-5'); 
+     storageInput5.text(localStorage.getItem('textInput-5'));
      
      var saveToLocalStorage5 = function () {
          localStorage.setItem('textInput-5', storageInput5.val());
@@ -111,7 +111,7 @@ $(document).ready(function () {
      //3pm
      var storageInput6 = $('#input-6');  
      var button6 = $('#saveBtn-6'); 
-     storageInput6.value = localStorage.getItem('textInput-6'); 
+     storageInput6.text(localStorage.getItem('textInput-6'));
      
      var saveToLocalStorage6 = function () {
          localStorage.setItem('textInput-6', storageInput6.val());
@@ -122,7 +122,7 @@ $(document).ready(function () {
      //4pm
      var storageInput7 = $('#input-7');  
      var button7 = $('#saveBtn-7'); 
-     storageInput7.value = localStorage.getItem('textInput-7'); 
+     storageInput7.text(localStorage.getItem('textInput-7'));
     
      var saveToLocalStorage7 = function () {
          localStorage.setItem('textInput-7', storageInput7.val());
@@ -133,7 +133,7 @@ $(document).ready(function () {
      //5pm
      var storageInput8 = $('#input-8');  
      var button8 = $('#saveBtn-8'); 
-     storageInput8.value = localStorage.getItem('textInput-8'); 
+     storageInput8.text(localStorage.getItem('textInput-8'));
      
      var saveToLocalStorage8 = function () {
          localStorage.setItem('textInput-8', storageInput8.val());

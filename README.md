@@ -43,11 +43,11 @@ THEN the saved events persist
 
 
 ## Links
-* [Deployed Website Link](https://andrewt11.github.io/QuizzyWebAPIzzy/)
-* [Code Repository Link](https://github.com/AndrewT11/QuizzyWebAPIzzy)
+* [Deployed Website Link](https://andrewt11.github.io/Daily-Planner-for-Life/)
+* [Code Repository Link](https://github.com/AndrewT11/Daily-Planner-for-Life)
 
 ## Credits
-Marie Morris
+
 
 ### Resources
 
