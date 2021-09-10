@@ -2,7 +2,8 @@ $(document).ready(function () {
     //timer
     var date = moment();
     $("#currentDay").text(date.format("MMM Do YYYY, h:mm:ss a"));
-
+    var currentTime = parseInt(moment().format("HH a"));
+    console.log(currentTime) 
 
     //hours on planner
     var hours = [
@@ -135,32 +136,84 @@ $(document).ready(function () {
   var currentTime = parseInt(moment().format("HH a"));
   console.log(currentTime) 
 
-
-// class = past
-    if (currentTime < 9) {
-            $('#input-0').attr("class", "past")
-            //class = present
-    } else if (currentTime === 9) {
-            $('#input-0').attr("class", "past")
-    }   else {
-            $('#input-0').attr("class", "past")
-    }
+  if (currentTime > 9) {
+    $('#input-0').addClass("past")
+} else if (currentTime === 9) {
+    $('#input-0').addClass("present")
+}  else {
+    $('#input-0').addClass("future")
 }
-  
-  //if (currentTime === 9), class = present
-  
-  //if (currentTime > 9), class = future
 
+if (currentTime > 10) {
+    $('#input-1').addClass("past")
+} else if (currentTime === 10) {
+    $('#input-1').addClass("present")
+}  else {
+    $('#input-1').addClass("future")
+}
+if (currentTime > 11) {
+    $('#input-2').addClass("past")
+} else if (currentTime === 11) {
+    $('#input-2').addClass("present")
+}  else {
+    $('#input-2').addClass("future")
+}
+if (currentTime > 12) {
+    $('#input-3').addClass("past")
+} else if (currentTime === 12) {
+    $('#input-3').addClass("present")
+}  else {
+    $('#input-3').addClass("future")
+}
+if (currentTime > 13) {
+    $('#input-4').addClass("past")
+} else if (currentTime === 13) {
+    $('#input-4').addClass("present")
+}  else {
+    $('#input-4').addClass("future")
+}
+if (currentTime > 14) {
+    $('#input-5').addClass("past")
+} else if (currentTime === 14) {
+    $('#input-5').addClass("present")
+}  else {
+    $('#input-5').addClass("future")
+}
+if (currentTime > 15) {
+    $('#input-6').addClass("past")
+} else if (currentTime === 15) {
+    $('#input-6').addClass("present")
+}  else {
+    $('#input-6').addClass("future")
+}
+if (currentTime > 16) {
+    $('#input-7').addClass("past")
+} else if (currentTime === 16) {
+    $('#input-7').addClass("present")
+}  else {
+    $('#input-7').addClass("future")
+}
+if (currentTime > 17) {
+    $('#input-8').addClass("past")
+} else if (currentTime === 17) {
+    $('#input-8').addClass("present")
+}  else {
+    $('#input-8').addClass("future")
+}
 
-
-
-
+})
 
 /////////////////////////////////////////////////////////////////////////
 //Left to do:
 // - color change past, present, future
 
 //////////////////////////////////////////////////////////////////////////
+ //if (currentTime < 9) , class = past
+  
+  //if (currentTime === 9), class = present
+  
+  //if (currentTime > 9), class = future
+
 
 // ## User Story
 
@@ -185,4 +238,4 @@ $(document).ready(function () {
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage ***
 // WHEN I refresh the page
-// THEN the saved events persist **
+// THEN the saved events persist ***
