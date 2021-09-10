@@ -22,6 +22,7 @@ No installation necessary.
 Students have completed this project when:
 
 GIVEN I am using a daily planner to create a schedule
+
 *WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
 *WHEN I scroll down
@@ -47,6 +48,10 @@ THEN the saved events persist
 * [Code Repository Link](https://github.com/AndrewT11/Daily-Planner-for-Life)
 
 ## Credits
+Andrew Tran
+Levi Halvorson
+Matthew Daniels
+Mengmei Tu
 
 
 ### Resources
@@ -54,9 +59,12 @@ THEN the saved events persist
 * https://www.w3schools.com/
 * https://developer.mozilla.org/en-US/
 * https://choosealicense.com/
-* https://www.youtube.com/watch?v=LQGTb112N_c
-* https://www.youtube.com/watch?v=f4fB9Xg2JEY
-* https://www.youtube.com/watch?v=riDzcEQbX6k
+* https://cloudconvert.com/webm-to-gif
+* https://www.github.com
+* https://www.youtube.com/watch?v=rVyTjFofok0&t=539s
+* https://www.youtube.com/watch?v=k8yJCeuP6I8
+* https://www.youtube.com/watch?v=rVyTjFofok0
+
 
 
 
