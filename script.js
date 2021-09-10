@@ -6,15 +6,15 @@ $(document).ready(function () {
 
     //hours on planner
     var hours = [
-        { hour: "9:00 am" }, 
-        { hour: "10:00 am" },
-        { hour: "11:00 am" },
-        { hour: "12:00 pm" },
-        { hour: "1:00 pm" },
-        { hour: "2:00 pm" },
-        { hour: "3:00 pm" },
-        { hour: "4:00 pm" },
-        { hour: "5:00 pm" }
+        { hour: "9:00 am", compare: 9 }, 
+        { hour: "10:00 am", compare: 10},
+        { hour: "11:00 am", compare: 11},
+        { hour: "12:00 pm", compare: 12},
+        { hour: "1:00 pm", compare: 13},
+        { hour: "2:00 pm", compare: 14},
+        { hour: "3:00 pm", compare: 15},
+        { hour: "4:00 pm", compare: 16},
+        { hour: "5:00 pm", compare: 17}
     ]
 
     //row that all elements will be appended to
@@ -33,7 +33,7 @@ $(document).ready(function () {
      //9 am
      var storageInput0 = document.getElementById('input-0');  //select text area id
      var button0 = document.getElementById('saveBtn-0');  //select button id
-     storageInput0.value = localStorage.getItem('textInput-0'); //select key value to get from localStorage
+     storageInput0.value = localStorage.getItem('textInput-0'); //set value in input box
     
      var saveToLocalStorage0 = function () {
          localStorage.setItem('textInput-0', storageInput0.value);
@@ -132,23 +132,32 @@ $(document).ready(function () {
 
      //Time comparisons for color change past, present, future
   //present time
-  var currentTime = parseInt(moment().format("HH a"))-12;
+  var currentTime = parseInt(moment().format("HH a"));
   console.log(currentTime) 
 
-  //if (currentTime > schedule time), class = past
+
+// class = past
+    if (currentTime < 9) {
+            $('#input-0').attr("class", "past")
+            //class = present
+    } else if (currentTime === 9) {
+            $('#input-0').attr("class", "past")
+    }   else {
+            $('#input-0').attr("class", "past")
+    }
+}
   
-  //if (currentTime == schedule time), class = present
+  //if (currentTime === 9), class = present
   
-  //if (currentTime < schedule time), class = future
+  //if (currentTime > 9), class = future
 
 
 
 
-})
+
 
 /////////////////////////////////////////////////////////////////////////
 //Left to do:
-// - local storage (values not appearing)
 // - color change past, present, future
 
 //////////////////////////////////////////////////////////////////////////
@@ -166,14 +175,14 @@ $(document).ready(function () {
 // ```md
 // GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
+// THEN the current day is displayed at the top of the calendar ***
 // WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
+// THEN I am presented with timeblocks for standard business hours ***
 // WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+// THEN each timeblock is color coded to indicate whether it is in the past, present, or future NOT DONE YET
 // WHEN I click into a timeblock
-// THEN I can enter an event
+// THEN I can enter an event ***
 // WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
+// THEN the text for that event is saved in local storage ***
 // WHEN I refresh the page
-// THEN the saved events persist
+// THEN the saved events persist **
